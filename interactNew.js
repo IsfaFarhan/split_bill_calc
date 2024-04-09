@@ -24,23 +24,25 @@ function addItems (){
         let useritem04 = document.getElementById('useritem04');
         let useritem05 = document.getElementById('useritem05');
         if (useritem01.style.display === 'block' || useritem01.style.display === '') {
-            item1.value =''
+            item1u1.value =''
         }
         if (useritem02.style.display === 'block' || useritem02.style.display === '') {
             useritem02.style.display = 'none';
-            item2.value =''
+            item2u1.value =''
         }
         if (useritem03.style.display === 'block' || useritem03.style.display === '') {
             useritem03.style.display = 'none';
-            item3.value =''
+            item3u1.value =''
         } 
         if (useritem04.style.display === 'block' || useritem04.style.display === '') {
             useritem04.style.display = 'none';
-            item4.value =''
+            item4u1.value =''
         }
         if (useritem05.style.display === 'block' || useritem05.style.display === '') {
             useritem05.style.display = 'none';
-            item5.value =''
+            item5u1.value =''
+        }else{
+            alert ('Done Reset')
         }
 }
 
@@ -88,6 +90,8 @@ function addItems2 (){
         if (user2item05.style.display === 'block' || user2item05.style.display === '') {
             user2item05.style.display = 'none';
             item5u2.value =''
+        }else{
+            alert ('Done Reset')
         }
 }
 
@@ -135,6 +139,8 @@ function addItems3 (){
         if (user3item05.style.display === 'block' || user3item05.style.display === '') {
             user3item05.style.display = 'none';
             item5u3.value =''
+        }else{
+            alert ('Done Reset')
         }
 }
 
@@ -182,6 +188,8 @@ function addItems4 (){
         if (user4item05.style.display === 'block' || user4item05.style.display === '') {
             user4item05.style.display = 'none';
             item5u4.value =''
+        }else{
+            alert ('Done Reset')
         }
 }
 
@@ -229,6 +237,8 @@ function addItems5 (){
         if (user5item05.style.display === 'block' || user5item05.style.display === '') {
             user5item05.style.display = 'none';
             item5u5.value =''
+        }else{
+            alert ('Done Reset')
         }
 }
 
