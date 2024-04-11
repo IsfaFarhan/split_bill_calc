@@ -271,13 +271,3 @@ function removeUser() {
         alert('Minimum User')
     }
 }
-
-/* 
-function addUser4(){
-    let user4 = document.getElementById('user4');
-    if (user4.style.display === 'block' || user4.style.display === ''){
-        user4.style.display === 'none';
-    }else{
-        user4.style.display = 'block';
-    }
-} */
