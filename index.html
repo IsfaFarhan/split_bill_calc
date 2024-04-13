@@ -4,26 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="split bill web apps">
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="Main.css">
     <title>Asing-asing</title>
     <script src="calc.js"></script>
     <script src="interactNew.js"></script>
+    
 </head>
 <body>
-    <h1>Bayar Asing Tau</h1>
-    <p>
-        Bayar Asing is a free web app to help you and your friends to split the bill after a good meals.
+    <div class="container">
+    <div class="mainheader">
+    <div class="headerleft">
+    <h1>Bill Splitter</h1>
+    <p class="subheader1">
+        Easy way to split bill with your friends!
     </p>
+    </div>
+    <figure>
+        <img src="image/Bill_Split2-06.svg" width="74" height="74">
+    </figure>
+    </div> <!-- <div class="mainheader"> -->
     
 <!-- User1 -->
-<form>
-    <div id="user1">
-        <div id="username">
+<div class="firstback">
+    <div class="secondback">
+    <div id="user1" class="user">
+        <div id="username" class="username">
             <label>
                 Name :
             </label>
             <input type="text" id="name1" name="name" placeholder="Your name" required>
-        </div>
+        </div><!-- <div id="username"> -->
         <br>
         <div id="useritem01">
             <div class="itemprice">
@@ -33,7 +43,7 @@
             <input type="number" id="item1u1" name="itemprice" placeholder="item price">
             </div>
             <br>
-        </div>
+        </div>  <!-- <div id="useritem01"> -->
         <div id="useritem02" style="display: none;">
             <div class="itemprice">
             <label>
@@ -77,12 +87,12 @@
         <div class="addbuttons">
             <button type="button" id="useritemadd" onclick="resetItems()">Reset</button>
         </div>
-    </div>
+    </div>  <!-- <div id="user1" class="user"> -->
 
 <!-- User2 -->
 
-    <div id="user2">
-        <div id="username2">
+    <div id="user2" class="user">
+        <div id="username2" class="username">
             <label>
                 Name :
             </label>
@@ -145,8 +155,8 @@
 
 <!-- User3 -->
 
-<div id="user3" style="display: none;">
-    <div id="username3">
+<div id="user3" class="user" style="display: none;">
+    <div id="username3" class="username">
         <label>
             Name :
         </label>
@@ -209,8 +219,8 @@
 
 <!-- User4 -->
 
-<div id="user4" style="display: none;">
-    <div id="username4">
+<div id="user4" class="user" style="display: none;">
+    <div id="username4" class="username">
         <label>
             Name :
         </label>
@@ -273,8 +283,8 @@
 
 <!-- User5 -->
 
-<div id="user5" style="display: none;">
-    <div id="username5">
+<div id="user5" class="user" style="display: none;">
+    <div id="username5" class="username">
         <label>
             Name :
         </label>
@@ -338,13 +348,15 @@
 
 <div class="userbutton">
 <div class="addbuttons">
-    <button type="button" id="useritemadd" onclick="addUser()">Add user</button>
+    <div class="buttonuser1" type="button" id="useritemadd" onclick="addUser()"><img src="/image/plus.png" width="10" height="10"></div>
 </div>
+<p class="friend">Friend</p>
 <div class="addbuttons">
-    <button type="button" id="useritemadd" onclick="removeUser()">Remove user</button>
+    <div class="buttonuser2" type="button" id="useritemadd" onclick="removeUser()"><img src="/image/minus-sign.png" width="10" height="10"></div>
 </div>
 </div>
 <br>
+</div>  <!-- <div class="secondback"> -->
 
 <!-- Tax Area -->
 
@@ -353,9 +365,8 @@
         Service Tax :
     </label>
     <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> %
-    <br>
-    <button type="button" class="buttoncalc" id="calculate" onclick="calc()">Calculate</button>    
-</div>
+</div> <!-- <div class="calctax"> -->
+    <button type="button" class="buttoncalc" id="calculate" onclick="calc()">Calculate</button>
     <br>
     
 <!-- Summary -->
@@ -382,5 +393,7 @@
 <p id="totaluser5"></p>
 <br>
 </div>
+</div> <!-- <div class="firstback"> -->
+</div> <!-- <div class="container"> -->
 </body>
 </html>

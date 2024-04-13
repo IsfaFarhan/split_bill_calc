@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+* {
+    font-family: "Lexend", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    color: #272727;
+}
+
+.container {
+    max-width: 320px;
+    width: 100%;
+   /*  margin: 0 auto; */ /* This will center the container horizontally */
+}
+
+.mainheader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 36px;
+    margin-bottom: 2px;
+    
+}
+.headerleft{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px ;
+    padding-left: 2px;
+}
+h1{
+    font-weight:520;
+    font-size: 24px;
+    color: #00997C;
+}
+.subheader1{
+    width: 160px;
+    margin-top: 10px;
+    font-size: 8px;
+    padding: 3px;
+    background-color: #F1E6DF;
+    border-radius: 10px;
+}
+
+figure{
+    padding-top: 24px;
+    padding-right: 30px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+    margin-left: 10px;
+    background-color: #FED18B;
+    border-bottom-left-radius: 60px;
+
+}
+
+.firstback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1; 
+    background-color: #FED18B;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+    
+    
+}
+
+.secondback{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F1E6DF;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.userbutton{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: small;
+}
+
+.friend{
+    padding: 4px;
+    background-color: #00CCA5;
+}
+
+.buttonuser1{
+    padding:4px 10px 4px 10px;
+    background-color: white;
+    border-top-left-radius:20px ;
+    border-bottom-left-radius: 20px;
+}
+
+.buttonuser2{
+    padding:4px 10px 4px 10px;
+    background-color: white;
+    border-top-right-radius:20px ;
+    border-bottom-right-radius: 20px;
+}
