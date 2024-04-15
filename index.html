@@ -340,16 +340,30 @@
 </div>  <!-- <div class="secondback"> -->
 
 <!-- Tax Area -->
+<div class="rows">
+    <div class="box1">
+        <div class="box1a">
+            <div class="box1b"></div>
+        </div>
+    </div>
 
-<div class="calctax">
-    <label>
-        Service Tax:
-    </label>
-    <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> %
-</div> <!-- <div class="calctax"> -->
+        <div class="calctax">
+        <label>
+            Service Tax:
+        </label>
+        <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> % <!-- <div class="calctax"> -->
+        </div>
+
+        <div class="box2">
+        <div class="box2a">
+            <div class="box2b"></div>
+        </div>
+    </div>
+</div>
+
     <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle()/* disableDivClick('calculate') */;
     ">SPLIT BILL</button>
-    <br>
+<br>
     
 <!-- Summary -->
 <br>
@@ -391,7 +405,7 @@
 <a><button class="resetall" id="resetall" onclick="resetingAll()">Reset All</button></a>
 </div>
 </div> <!-- <div class="firstback"> -->
-    <p class="disclaimer">Disclaimer: We do not collect any data from you and all the data is processes directly happen in your internet browser</p>
+    <p class="disclaimer">Disclaimer: We do not collect any data from you, and all data processing occurs directly in your internet browser</p>
 </div> <!-- <div class="container"> -->
 
 <div id="black" class="black" style="display: none;"></div>
