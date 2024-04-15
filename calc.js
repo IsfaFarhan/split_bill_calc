@@ -244,7 +244,7 @@ if (totalAndTax) {
 function resetTotalPrice(){
     const sevTax = document.getElementById('servTax')
     const totalPrice = document.getElementById('totalprice')
-    totalPrice.innerText = '';
+    totalPrice.innerText = 'RM 0.00';
     sevTax.value =''
 
 }

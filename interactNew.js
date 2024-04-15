@@ -26,6 +26,7 @@ function addItems (){
     }
 
     function resetItems() {
+        let username = document.getElementById('name1');
         let useritem01 = document.getElementById('useritem01')
         let useritem02 = document.getElementById('useritem02');
         let useritem03 = document.getElementById('useritem03');
@@ -33,6 +34,7 @@ function addItems (){
         let useritem05 = document.getElementById('useritem05');
         if (useritem01.style.display === 'block' || useritem01.style.display === '') {
           item1u1.value =''
+          username.value=''
           document.querySelector('#useritem01 .itemprice').classList.remove('bottom-corner-prev')
         }
         if (useritem02.style.display === 'block' || useritem02.style.display === '') {
@@ -97,6 +99,7 @@ function addItems2 (){
     }
 
     function resetItems2() {
+        let username = document.getElementById('name2');
         let user2item01 = document.getElementById('user2item01')
         let user2item02 = document.getElementById('user2item02');
         let user2item03 = document.getElementById('user2item03');
@@ -104,6 +107,7 @@ function addItems2 (){
         let user2item05 = document.getElementById('user2item05');
         if (user2item01.style.display === 'block' || user2item01.style.display === '') {
             item1u2.value =''
+            username.value=''
             document.querySelector('#user2item01 .itemprice').classList.remove('bottom-corner-prev')
 
         }
@@ -169,13 +173,16 @@ function addItems3 (){
     }
 
     function resetItems3() {
+        let username = document.getElementById('name3');
         let user3item01 = document.getElementById('user3item01')
         let user3item02 = document.getElementById('user3item02');
         let user3item03 = document.getElementById('user3item03');
         let user3item04 = document.getElementById('user3item04');
         let user3item05 = document.getElementById('user3item05');
+        let user3 = document.getElementById('user3');
         if (user3item01.style.display === 'block' || user3item01.style.display === '') {
             item1u3.value =''
+            username.value=''
             document.querySelector('#user3item01 .itemprice').classList.remove('bottom-corner-prev')
 
         }
@@ -205,7 +212,11 @@ function addItems3 (){
         }
         if(item1u3.value ===''){
           reseting()
-      }
+        }
+        if(user3.style.display === 'none'){
+          resetingRemoveFriend()
+        }
+      
     }
 ////User4////
 
@@ -240,13 +251,16 @@ function addItems4 (){
     }
 
     function resetItems4() {
+        let username = document.getElementById('name4');
         let user4item01 = document.getElementById('user4item01')
         let user4item02 = document.getElementById('user4item02');
         let user4item03 = document.getElementById('user4item03');
         let user4item04 = document.getElementById('user4item04');
         let user4item05 = document.getElementById('user4item05');
+        let user4 = document.getElementById('user4');
         if (user4item01.style.display === 'block' || user4item01.style.display === '') {
             item1u4.value =''
+            username.value=''
             document.querySelector('#user4item01 .itemprice').classList.remove('bottom-corner-prev')
 
         }
@@ -276,6 +290,9 @@ function addItems4 (){
         }
           if(item1u4.value ===''){
             reseting()
+        }
+        if(user4.style.display === 'none'){
+          resetingRemoveFriend()
         }
         
 }
@@ -313,13 +330,16 @@ function addItems5 (){
     }
 
     function resetItems5() {
+        let username = document.getElementById('name5');
         let user5item01 = document.getElementById('user5item01')
         let user5item02 = document.getElementById('user5item02');
         let user5item03 = document.getElementById('user5item03');
         let user5item04 = document.getElementById('user5item04');
         let user5item05 = document.getElementById('user5item05');
+        let user5 = document.getElementById('user5');
         if (user5item01.style.display === 'block' || user5item01.style.display === '') {
             item1u5.value =''
+            username.value=''
             document.querySelector('#user5item01 .itemprice').classList.remove('bottom-corner-prev')
 
         }
@@ -349,6 +369,9 @@ function addItems5 (){
         }
         if(item1u5.value ===''){
           reseting()
+      }
+      if(user5.style.display === 'none'){
+        resetingRemoveFriend()
       }
 }
 
@@ -384,14 +407,14 @@ function removeUser() {
     let notificationMassageMin = document.getElementById("notificationMessageMin")
     let bgNotification = document.getElementById("black")
     if (user5.style.display === 'block' || user5.style.display === '') {
-        /* resetItems5(); */
         user5.style.display = 'none';
+        resetItems5();
     } else if (user4.style.display === 'block' || user4.style.display === ''){
-        resetItems4();
         user4.style.display = 'none';
+        resetItems4();
     }else if (user3.style.display === 'block' || user3.style.display === ''){
-        resetItems3();
         user3.style.display = 'none';
+        resetItems3();
     }else{
       bgNotification.style.display = "block"
       notification.style.display = "flex";
@@ -456,7 +479,26 @@ function maxItem(){
     bgNotification.style.display = "none";
     notification.style.display = "none";
   }
+ 
+  function resetingRemoveFriend(){
+    let notification = document.getElementById("notificationRemoveFriend");
+    let bgNotification = document.getElementById("black")
+    bgNotification.style.display = "block"
+    notification.style.display = "flex";
+    setTimeout(function(){
+      closeResetingRemoveFriend();
+    }, 2000);
+  }
 
+  function closeResetingRemoveFriend() {
+    let notification = document.getElementById("notificationRemoveFriend");
+    let bgNotification = document.getElementById("black")
+    bgNotification.style.display = "none";
+    notification.style.display = "none";
+  }
+
+
+  
   function resetingAll(){
     let notification = document.getElementById("notificationResetAll");
     let bgNotification = document.getElementById("black")
@@ -468,6 +510,7 @@ function maxItem(){
     removeUserAll();
     resetElements();
     resetTotalPrice();
+    resetSplitTitle();
     bgNotification.style.display = "block"
     notification.style.display = "flex";
     setTimeout(function(){
@@ -496,4 +539,12 @@ function maxItem(){
     notification.style.display = "none";
   }
   
-  
+  function splitTitle(){
+    const split = document.getElementById('spint')
+    split.style.display = 'flex';
+  }
+
+  function resetSplitTitle(){
+    const split = document.getElementById('spint')
+    split.style.display = 'none';
+  }

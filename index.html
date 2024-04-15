@@ -92,7 +92,7 @@
             <label>
                 Name
             </label>
-            <input type="text" id="name2" name="name" placeholder="name">
+            <input type="text" id="name2" name="name" placeholder="Friend Name">
         </div>
         <div id="user2item01">
             <div class="itemprice">
@@ -152,7 +152,7 @@
         <label>
             Name
         </label>
-        <input type="text" id="name3" name="name" placeholder="name">
+        <input type="text" id="name3" name="name" placeholder="Friend Name">
     </div>
     <div id="user3item01">
         <div class="itemprice">
@@ -214,7 +214,7 @@
         <label>
             Name
         </label>
-        <input type="text" id="name4" name="name" placeholder="name">
+        <input type="text" id="name4" name="name" placeholder="Friend Name">
     </div>
     <div id="user4item01">
         <div class="itemprice">
@@ -276,7 +276,7 @@
         <label>
             Name
         </label>
-        <input type="text" id="name5" name="name" placeholder="name">
+        <input type="text" id="name5" name="name" placeholder="Friend Name">
     </div>
     <div id="user5item01">
         <div class="itemprice">
@@ -347,7 +347,7 @@
     </label>
     <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> %
 </div> <!-- <div class="calctax"> -->
-    <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc() /* disableDivClick('calculate') */;
+    <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle()/* disableDivClick('calculate') */;
     ">SPLIT BILL</button>
     <br>
     
@@ -360,7 +360,7 @@
 </div>
 <br>
 
-<label class="spint">Split into</label>
+<label id="spint" class="spint" style="display: none;">Split into</label>
 
 
 <div class="align" style="display: none;">
@@ -417,6 +417,11 @@
   <div  id ="notificationReset" class="notification" style="display: none;"> 
     <img class="image" src="/image/receipt.gif">
     <p id="notificationMessage">Resetting</p>
+  </div>
+
+  <div  id ="notificationRemoveFriend" class="notification" style="display: none;"> 
+    <img class="image" src="/image/receipt.gif">
+    <p id="notificationMessage">Remove Friends</p>
   </div>
 
   <div  id ="notificationResetAll" class="notification" style="display: none;"> 

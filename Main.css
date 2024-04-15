@@ -61,9 +61,9 @@ figure{
     padding-right: 16px;
     padding-left: 20px;
     padding-bottom: 20px;
-    margin-left: 10px;
+    margin-left: 6px;
     background-color: #FED18B;
-    border-top-right-radius: 10px;
+    border-top-right-radius: 6px;
     border-bottom-left-radius: 60px;
 
 }
@@ -91,7 +91,7 @@ figure{
 /* Targeting the input field */
 input[type="text"] {
     /* Adjusting the width relative to its containing element */
-    width: 90.37px; /* You can change this value as needed */
+    width: 100px; /* You can change this value as needed */
     border-radius: 8px;
     padding-left: 8px;
     border:1px #00CCA5 solid;
@@ -312,19 +312,20 @@ input[type="number"]{
     margin:5px;
     margin-bottom: 16px;
     padding: 3px 40px;
-    background-color:white;
+    background-color:#FC7059;
+    color: white;
     border: none;
     /* color: white; */
     border-radius: 5px;
     box-shadow:2px 2px 0px 0 #3c635c;
 }
-
+/* 
 .resetall a{
     text-decoration: none;
     color: #272727;
-}
+} */
 .resetall:active{
-    background-color:rgb(173, 173, 173);
+    background-color:#b96b60;
     box-shadow:inset -1px -1px 0px 0 #3c635c;
 }
 
@@ -395,6 +396,7 @@ input[type="number"]{
     background-color: #8BFFA4;
     border-color: #8BFFA4;
     border-radius: 5px;
+    padding-bottom: 20px;
   }
 
   .notificationItem {
@@ -417,7 +419,7 @@ input[type="number"]{
   .notificationItem img{
     width: 183px;
     height: 74px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
   }
 
   .notificationItem p{
@@ -427,6 +429,7 @@ input[type="number"]{
 
   .notiItemButton{
     margin-top: 4px;
+    padding-bottom: 20px;
     width: 72px;
     height: 19px;
     background-color: #8BFFA4;
