@@ -364,13 +364,13 @@
 
                 <!-- add shared items button -->
                 <div class="sharebutton">
-                    <div class="bgTop">
+                    <div id="bgTop"class="bgTop">
                         <p class="shareTitle">Shared Items</p>
                     </div>
 
                     <!--//// shared item input section //// -->
 
-                    <div class="sharedItemBg">
+                    <div id="sharedItemBg" class="sharedItemBg">
                         <div id="shared" class="user" style="display: none;">
                             <div id="shareitem" class="username">
                                 <label>
@@ -436,10 +436,9 @@
                     </div>
 
                     <!--//// end shared item input section //// -->
-
-                    <div class="bgBot">
-                        <div id="toggle" class="toggle" onclick="toggle()">
-                            <div class="toggleCircle" onclick="toggle()"></div>
+                    <div id="bgBot"class="bgBot">
+                        <div id="toggle" class="toggle">
+                            <div id="toggleCircle" class="toggleCircle" onclick="toggle() ;resetShareItemsremove() ;"></div>
                         </div>
                     </div>
                 </div>

@@ -84,7 +84,7 @@ figure{
     width: 290px;
     margin-left: 12px;
     border-radius: 10px;
-    box-shadow:inset -2px -2px 4px 2px #debc84;
+    box-shadow:inset 2px -2px 4px 2px #debc84;
 }
 
 .secondback{
@@ -127,7 +127,7 @@ input[type="number"]{
     width:260px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    box-shadow: -3px 6px 4px 0px #cab3a6;
+    box-shadow: 3px 6px 4px 0px #cab3a6;
 }
 
 .itemprice{
@@ -138,7 +138,7 @@ input[type="number"]{
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: -3px 6px 6px 0px #cab3a6;
+    box-shadow: 3px 6px 6px 0px #cab3a6;
 }
 
 .bottom-corner-last{

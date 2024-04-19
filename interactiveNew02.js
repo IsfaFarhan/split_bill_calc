@@ -78,8 +78,70 @@ function addShareItems(){
 
 
 function toggle() {
-  let toggle = document.getElementById('toggle');
-  toggle.classList.toggle('toggleActive');
+  let toggle = document.getElementById('toggleCircle');
+  toggle.classList.toggle('toggleActiveCircle');
+
+  let toggles = document.getElementById('toggle');
+  toggles.classList.toggle('toggleActive');
+
+  let bgshare = document.getElementById('sharedItemBg');
+  bgshare.classList.toggle('sharedItemBgActive'); 
+  
+  let bgTop = document.getElementById('bgTop');
+  bgTop.classList.toggle('bgTopActive');  
+
+  let bgBot = document.getElementById('bgBot');
+  bgBot.classList.toggle('bgBotActive');  
+
+  let itemShare = document.getElementById('shared')
+
+  if (itemShare.style.display === 'none'){
+    itemShare.style.display = 'block'
+  }else{
+    itemShare.style.display = 'none'
+  }
+  
+  
+}
+
+function resetShareItemsremove() {
+  let username = document.getElementById('FriendNumber');
+  let shareItem01 = document.getElementById('shareItem01')
+  let shareItem02 = document.getElementById('shareItem02');
+  let shareItem03 = document.getElementById('shareItem03');
+  let shareItem04 = document.getElementById('shareItem04');
+  let shareItem05 = document.getElementById('shareItem05');
+  let user5 = document.getElementById('user5'); /* might use for toggle later */
+  if (shareItem01.style.display === 'block' || shareItem01.style.display === '') {
+      share1.value =''
+      username.value=''
+      document.querySelector('#shareItem01 .itemprice').classList.remove('bottom-corner-prev')
+
+  }
+  if (shareItem02.style.display === 'block' || shareItem02.style.display === '') {
+      shareItem02.style.display = 'none';
+      share2.value =''
+      document.querySelector('#shareItem02 .itemprice').classList.remove('bottom-corner-prev')
+
+  }
+  if (shareItem03.style.display === 'block' || shareItem01.style.display === '') {
+      shareItem03.style.display = 'none';
+      share3.value =''
+      document.querySelector('#shareItem03 .itemprice').classList.remove('bottom-corner-prev')
+
+  } 
+  if (shareItem04.style.display === 'block' || shareItem04.style.display === '') {
+      shareItem04.style.display = 'none';
+      share4.value =''
+      document.querySelector('#shareItem04 .itemprice').classList.remove('bottom-corner-prev')
+
+  }
+  if (shareItem05.style.display === 'block' || shareItem05.style.display === '') {
+      shareItem05.style.display = 'none';
+      share5.value =''
+      document.querySelector('#shareItem01 .itemprice').classList.remove('bottom-corner-last')
+
+  }
 }
   /* var content = document.getElementById("content2");
   content.classList.toggle('content3');*/
