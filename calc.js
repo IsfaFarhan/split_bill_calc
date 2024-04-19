@@ -1,4 +1,7 @@
 function calc() {
+
+     /* ////// CALLING DATA INTO THE FUNCTION ////// */
+
     const item1Value = parseFloat(document.getElementById('item1u1').value) || 0;
     const item2Value = parseFloat(document.getElementById('item2u1').value) || 0;
     const item3Value = parseFloat(document.getElementById('item3u1').value) || 0;
@@ -43,6 +46,10 @@ function calc() {
 
     const sevTax = parseFloat(document.getElementById('servTax').value) || 0;
 
+
+
+    /* ////// USER 1 ITEM CALCULATION ////// */
+
     const totalAndTax = total1 + (total1 * (sevTax / 100));
     const totalAndTaxFix = totalAndTax.toFixed(2);
     const totaluser1 = document.getElementById('totaluser1');
@@ -72,6 +79,10 @@ if (totalAndTax) {
 
     align.appendChild(totalfriends);
 }
+
+
+     /* ////// USER 2 ITEM CALCULATION ////// */
+
 
     const totalAndTax2 = total2 + (total2*(sevTax/100))
     const totalAndTax2Fix = totalAndTax2.toFixed(2);
@@ -103,14 +114,9 @@ if (totalAndTax) {
         align2.appendChild(totalfriends);
     }
 
+     /* ////// USER 3 ITEM CALCULATION ////// */
 
-    /* if (username2Value) {
-        user2name.innerText ='🐰  '+ username2Value;
-    }
-    if (totalAndTax2) {
-        totaluser2.innerText ='RM '+ totalAndTax2;
-    }
- */
+
     const totalAndTax3 = total3 + (total3*(sevTax/100))
     const totalAndTax3Fix = totalAndTax3.toFixed(2);
     const totaluser3 = document.getElementById('totaluser3');
@@ -142,12 +148,9 @@ if (totalAndTax) {
         // For example, if you want to append it to the body:
         align3.appendChild(totalfriends);
     }
-    /* if (username3Value) {
-        user3name.innerText ='🦁  '+ username3Value;
-    }
-    if (totalAndTax3) {
-        totaluser3.innerText ='RM '+ totalAndTax3;
-    } */
+
+     /* ////// USER 4 ITEM CALCULATION ////// */
+
 
     const totalAndTax4 = total4 + (total4*(sevTax/100))
     const totalAndTax4Fix = totalAndTax4.toFixed(2);
@@ -180,13 +183,10 @@ if (totalAndTax) {
         // For example, if you want to append it to the body:
         align4.appendChild(totalfriends);
     }
-   /*  if (username4Value) {
-        user4name.innerText ='🐨  '+ username4Value;
-    }
-    if (totalAndTax4) {
-        totaluser4.innerText ='RM '+ totalAndTax4;
-    } */
-    
+
+       /* ////// USER 5 ITEM CALCULATION ////// */
+
+
     const totalAndTax5 = total5 + (total5*(sevTax/100))
     const totalAndTax5Fix = totalAndTax5.toFixed(2);
     const totaluser5 = document.getElementById('totaluser5');
@@ -213,22 +213,61 @@ if (totalAndTax) {
         paragraph.setAttribute('id', 'totaluser5');
         paragraph.innerText = 'RM ' + totalAndTax5Fix;
         totalfriends.appendChild(paragraph);
-    
-        // Append the totalfriends to wherever you want it to appear
-        // For example, if you want to append it to the body:
         align5.appendChild(totalfriends);
     }
 
-    /* if (username5Value) {
-        user5name.innerText ='🐤  '+ username5Value;
+
+     /* ////// CALLING DATA INTO THE FUNCTION ////// */
+
+
+    const share1 = parseFloat(document.getElementById('share1').value) || 0;
+    const share2 = parseFloat(document.getElementById('share2').value) || 0;
+    const share3 = parseFloat(document.getElementById('share3').value) || 0;
+    const share4 = parseFloat(document.getElementById('share4').value) || 0;
+    const share5 = parseFloat(document.getElementById('share5').value) || 0;
+    const FriendNumber = parseFloat(document.getElementById('FriendNumber').value) || 0;
+
+
+    /* ////// SHARE ITEM CALCULATION LOGIC ////// */
+
+
+    const TotalShare = (share1 + share2 + share3 + share4 + share5)
+    const TotalPerPerson = (TotalShare + (TotalShare*(sevTax/100)))/FriendNumber
+    const TotalPerPersonFix = TotalPerPerson.toFixed(2)
+    const shareitems = document.getElementById('shareItems')
+    const appear = document.getElementById('sharedItemsPrice')
+    const align6 = document.getElementById('muncul')
+    
+    
+    if (TotalPerPersonFix) {
+        shareitems.innerText = '🐱 ' + 'Shared';
     }
-    if (totalAndTax5) {
-        totaluser5.innerText ='RM '+ totalAndTax5;
-    } */
+    
+    if (TotalPerPersonFix) {
+        appear.innerText = 'RM ' + TotalPerPersonFix;
+        const totalfriends = document.createElement('div');
+        totalfriends.classList.add('totalfriends');
+        totalfriends.style.height = '29px';
+    
+        const label = document.createElement('label');
+        label.setAttribute('id', 'shareItems');
+        label.innerText = '🐱 ' + 'Shared';
+        totalfriends.appendChild(label);
+    
+        const paragraph = document.createElement('p');
+        paragraph.setAttribute('id', 'shareItemPrice');
+        paragraph.innerText = 'RM ' + TotalPerPersonFix + ' P.P';
+        totalfriends.appendChild(paragraph);
+    
+        align6.appendChild(totalfriends);
+    }
+
+
+    /* ////// GRANG TOTAL CALCULATION LOGIC ////// */
 
 
     const totalPrice = document.getElementById('totalprice')
-    const allTotal = total1 + total2 + total3 + total4 + total5;
+    const allTotal = total1 + total2 + total3 + total4 + total5 + TotalShare;
     const allTotalTax = allTotal + (allTotal*(sevTax/100))
     const dec2TotalTax = allTotalTax.toFixed(2)
     totalPrice.innerText = 'RM '+ dec2TotalTax;

@@ -31,7 +31,7 @@ function addShareItems(){
     }
 
     function resetShareItems() {
-        let username = document.getElementById('shareitems');
+        let username = document.getElementById('FriendNumber');
         let shareItem01 = document.getElementById('shareItem01')
         let shareItem02 = document.getElementById('shareItem02');
         let shareItem03 = document.getElementById('shareItem03');
@@ -76,3 +76,10 @@ function addShareItems(){
       } */
 }
 
+
+function toggle() {
+  let toggle = document.getElementById('toggle');
+  toggle.classList.toggle('toggleActive');
+}
+  /* var content = document.getElementById("content2");
+  content.classList.toggle('content3');*/

@@ -522,6 +522,7 @@ function closeNotificationItem() {
     resetElements();
     resetTotalPrice();
     resetSplitTitle();
+    resetShareItems();
     bgNotification.style.display = "block"
     notification.style.display = "flex";
     setTimeout(function(){

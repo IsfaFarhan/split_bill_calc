@@ -5,18 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="split bill web apps">
-    <link rel="stylesheet" href="Main.css">
     <link rel="stylesheet" href="sharedItem.css">
+    <link rel="stylesheet" href="Main.css">
     <title>Bill Splitter</title>
     <link rel="icon" type="image" href="image/Bill_Split2-05.svg">
     <script src="calc.js"></script>
-    <script src="calc02.js"></script>
     <script src="interactNew.js"></script>
     <script src="interactiveNew02.js"></script>
-    <script>
+<!--     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
     </script>
-    <script defer src="/_vercel/insights/script.js"></script>
+    <script defer src="/_vercel/insights/script.js"></script> -->
 
 </head>
 
@@ -368,13 +367,12 @@
                     <div class="bgTop">
                         <p class="shareTitle">Shared Items</p>
                     </div>
-                    <br>
 
                     <!--//// shared item input section //// -->
 
-                    <div classs="sharedItemBg">
-                        <div id="shared" class="user" style="">
-                            <div id="shareitems" class="username">
+                    <div class="sharedItemBg">
+                        <div id="shared" class="user" style="display: none;">
+                            <div id="shareitem" class="username">
                                 <label>
                                     No. of Friends
                                 </label>
@@ -440,13 +438,13 @@
                     <!--//// end shared item input section //// -->
 
                     <div class="bgBot">
-                        <div class="toggle">
-                            <div class="toggleCircle" onclick="">Toggle Button</div>
+                        <div id="toggle" class="toggle" onclick="toggle()">
+                            <div class="toggleCircle" onclick="toggle()"></div>
                         </div>
                     </div>
                 </div>
                 <br>
-
+                        
                 <!-- ////// Share item sections ends ////// -->
 
                 <br>
@@ -475,7 +473,7 @@
                 </div>
             </div>
 
-            <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle()/* disableDivClick('calculate') */;">SPLIT BILL</button>
+            <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle(); /* splitEqual() *//* disableDivClick('calculate') */;">SPLIT BILL</button>
             <br>
 
             <!-- Summary -->
@@ -562,6 +560,7 @@
         <img class="image" src="/image/receipt.gif">
         <p id="notificationMessage">Resetting All</p>
     </div>
+
 </body>
 
 </html>

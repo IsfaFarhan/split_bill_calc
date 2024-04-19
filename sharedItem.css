@@ -1,1 +1,65 @@
 /* SHARESITEM IS FOR THE SHARED ITEM SECTION ONLY */
+#shared{
+    margin-top: 4px;
+} 
+
+.sharedbutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sharedItemBg{
+    width: 276px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    background-color: #E2CABC;
+    border-radius: 10px;
+}
+
+.bgTop{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 70px;
+    margin-left:70px;
+    border-radius: 70px 70px 0px 0px;
+    background-color: #E2CABC;
+}
+
+.bgBot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 6px;
+    margin-right: 70px;
+    margin-left: 70px;
+    border-radius: 0px 0px 16px 16px;
+    background-color: #E2CABC;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 18px;
+    border-radius: 30px;
+    background-color: #FC7059;
+    transition: flex-direction 2s ease-in;
+}
+
+.toggleCircle{
+    margin: 2px;
+    height: 14px;
+    width: 14px;
+    background-color: #E2CABC ;
+    border-radius: 10px;
+}
+
+.toggleActive{
+    flex-direction: row-reverse;
+    background-color: #8BFFA4 ;
+}
