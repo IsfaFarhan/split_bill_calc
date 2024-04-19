@@ -1,451 +1,567 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="split bill web apps">
     <link rel="stylesheet" href="Main.css">
+    <link rel="stylesheet" href="sharedItem.css">
     <title>Bill Splitter</title>
     <link rel="icon" type="image" href="image/Bill_Split2-05.svg">
     <script src="calc.js"></script>
+    <script src="calc02.js"></script>
     <script src="interactNew.js"></script>
+    <script src="interactiveNew02.js"></script>
     <script>
         window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-      </script>
-      <script defer src="/_vercel/insights/script.js"></script>
-    
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+
 </head>
+
 <body>
     <div class="container">
-    <div class="mainheader">
-    <div class="headerleft">
-    <h1>Bill Splitter</h1>
-    <p class="subheader1">
-        Easy way to split bill with your friends!
-    </p>
-    </div>
-    <figure>
-        <img src="image/Bill_Split2-06.svg" width="74" height="74">
-    </figure>
-    </div> <!-- <div class="mainheader"> -->
-    
-<!-- User1 -->
-<div class="firstback">
-    <div class="secondback">
-    <div id="user1" class="user">
-        <div id="username" class="username">
-            <label>
-                Name
-            </label>
-            <input type="text" id="name1" name="name" placeholder="Your name" required>
-        </div><!-- <div id="username"> -->
-        <div id="useritem01">
-            <div class="itemprice">
-            <label>
-                Item 1
-            </label>
-            <input type="number" id="item1u1" name="itemprice" placeholder="Price">
+        <div class="mainheader">
+            <div class="headerleft">
+                <h1>Bill Splitter</h1>
+                <p class="subheader1">
+                    Easy way to split bill with your friends!
+                </p>
             </div>
-        </div>  <!-- <div id="useritem01"> -->
-        <div id="useritem02" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 2
-            </label>
-            <input type="number" id="item2u1" name="itemprice" placeholder="Price">
-        </div>
-         </div>
-         <div id="useritem03" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 3
-            </label>
-            <input type="number" id="item3u1" name="itemprice" placeholder="Price">
-            </div>
-        </div>
-        <div id="useritem04" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 4
-            </label>
-            <input type="number" id="item4u1" name="itemprice" placeholder="Price">
-            </div>
-         </div>
-         <div id="useritem05" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 5
-            </label>
-            <input type="number" id="item5u1" name="itemprice" placeholder="Price">
-            </div>
-         </div>
-        </div>  <!-- <div id="user1" class="user"> -->
-            <div class="itembutton">
-                <div class="addbuttons">
-                    <div id="useritemaddrest" onclick="resetItems()"><img src="image/undo.png" width="12" height="12"></div>
+            <figure>
+                <img src="image/Bill_Split2-06.svg" width="74" height="74">
+            </figure>
+        </div> <!-- <div class="mainheader"> -->
+
+        <!-- User1 -->
+        <div class="firstback">
+            <div class="secondback">
+                <div id="user1" class="user">
+                    <div id="username" class="username">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" id="name1" name="name" placeholder="Your name" required>
+                    </div><!-- <div id="username"> -->
+                    <div id="useritem01">
+                        <div class="itemprice">
+                            <label>
+                                Item 1
+                            </label>
+                            <input type="number" id="item1u1" name="itemprice" placeholder="Price">
+                        </div>
+                    </div> <!-- <div id="useritem01"> -->
+                    <div id="useritem02" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 2
+                            </label>
+                            <input type="number" id="item2u1" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="useritem03" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 3
+                            </label>
+                            <input type="number" id="item3u1" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="useritem04" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 4
+                            </label>
+                            <input type="number" id="item4u1" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="useritem05" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 5
+                            </label>
+                            <input type="number" id="item5u1" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                </div> <!-- <div id="user1" class="user"> -->
+                <div class="itembutton">
+                    <div class="addbuttons">
+                        <div id="useritemaddrest" onclick="resetItems()"><img src="image/undo.png" width="12"
+                                height="12"></div>
+                    </div>
+                    <div class="addbuttons">
+                        <div id="useritemadd" onclick="addItems()"><img src="image/plus.png" width="12" height="12">
+                        </div>
+                    </div>
+
                 </div>
-         <div class="addbuttons">
-            <div id="useritemadd" onclick="addItems()"><img src="image/plus.png" width="12" height="12"></div>
-        </div>
-    
-         </div>
 
-<!-- User2 -->
+                <!-- User2 -->
 
-    <div id="user2" class="user">
-        <div id="username2" class="username">
-            <label>
-                Name
-            </label>
-            <input type="text" id="name2" name="name" placeholder="Friend Name">
-        </div>
-        <div id="user2item01">
-            <div class="itemprice">
-            <label>
-                Item 1
-            </label>
-            <input type="number" id="item1u2" name="itemprice" placeholder="Price">
+                <div id="user2" class="user">
+                    <div id="username2" class="username">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" id="name2" name="name" placeholder="Friend Name">
+                    </div>
+                    <div id="user2item01">
+                        <div class="itemprice">
+                            <label>
+                                Item 1
+                            </label>
+                            <input type="number" id="item1u2" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user2item02" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 2
+                            </label>
+                            <input type="number" id="item2u2" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user2item03" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 3
+                            </label>
+                            <input type="number" id="item3u2" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user2item04" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 4
+                            </label>
+                            <input type="number" id="item4u2" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user2item05" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 5
+                            </label>
+                            <input type="number" id="item5u2" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                </div>
+                <div class="itembutton">
+                    <div class="addbuttons">
+                        <div id="useritemaddrest" onclick="resetItems2()"><img src="image/undo.png" width="12"
+                                height="12"></div>
+                    </div>
+                    <div class="addbuttons">
+                        <div id="useritemadd" onclick="addItems2()"><img src="image/plus.png" width="12" height="12">
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- User3 -->
+
+                <div id="user3" class="user" style="display: none;">
+                    <div id="username3" class="username">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" id="name3" name="name" placeholder="Friend Name">
+                    </div>
+                    <div id="user3item01">
+                        <div class="itemprice">
+                            <label>
+                                Item 1
+                            </label>
+                            <input type="number" id="item1u3" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user3item02" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 2
+                            </label>
+                            <input type="number" id="item2u3" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user3item03" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 3
+                            </label>
+                            <input type="number" id="item3u3" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user3item04" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 4
+                            </label>
+                            <input type="number" id="item4u3" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user3item05" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 5
+                            </label>
+                            <input type="number" id="item5u3" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="itembuttoncol">
+                        <div class="itembutton">
+                            <div class="addbuttons">
+                                <div id="useritemaddrest" onclick="resetItems3()"><img src="image/undo.png" width="12"
+                                        height="12"></div>
+                            </div>
+                            <div class="addbuttons">
+                                <div id="useritemadd" onclick="addItems3()"><img src="image/plus.png" width="12"
+                                        height="12"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User4 -->
+
+                <div id="user4" class="user" style="display: none;">
+                    <div id="username4" class="username">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" id="name4" name="name" placeholder="Friend Name">
+                    </div>
+                    <div id="user4item01">
+                        <div class="itemprice">
+                            <label>
+                                Item 1
+                            </label>
+                            <input type="number" id="item1u4" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user4item02" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 2
+                            </label>
+                            <input type="number" id="item2u4" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user4item03" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 3
+                            </label>
+                            <input type="number" id="item3u4" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user4item04" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 4
+                            </label>
+                            <input type="number" id="item4u4" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user4item05" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 5
+                            </label>
+                            <input type="number" id="item5u4" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="itembuttoncol">
+                        <div class="itembutton">
+                            <div class="addbuttons">
+                                <div id="useritemaddrest" onclick="resetItems4()"><img src="image/undo.png" width="12"
+                                        height="12"></div>
+                            </div>
+                            <div class="addbuttons">
+                                <div id="useritemadd" onclick="addItems4()"><img src="image/plus.png" width="12"
+                                        height="12"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- User5 -->
+
+                <div id="user5" class="user" style="display: none;">
+                    <div id="username5" class="username">
+                        <label>
+                            Name
+                        </label>
+                        <input type="text" id="name5" name="name" placeholder="Friend Name">
+                    </div>
+                    <div id="user5item01">
+                        <div class="itemprice">
+                            <label>
+                                Item 1
+                            </label>
+                            <input type="number" id="item1u5" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user5item02" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 2
+                            </label>
+                            <input type="number" id="item2u5" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user5item03" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 3
+                            </label>
+                            <input type="number" id="item3u5" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user5item04" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 4
+                            </label>
+                            <input type="number" id="item4u5" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div id="user5item05" style="display: none;">
+                        <div class="itemprice">
+                            <label>
+                                Item 5
+                            </label>
+                            <input type="number" id="item5u5" name="itemprice" placeholder="Price">
+                        </div>
+                    </div>
+                    <div class="itembuttoncol">
+                        <div class="itembutton">
+                            <div class="addbuttons">
+                                <div id="useritemaddrest" onclick="resetItems5()"><img src="image/undo.png" width="12"
+                                        height="12"></div>
+                            </div>
+                            <div class="addbuttons">
+                                <div id="useritemadd" onclick="addItems5()"><img src="image/plus.png" width="12"
+                                        height="12"></div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <br>
+                <div class="userbutton">
+                    <div class="buttonuser1" type="button" id="useritemadds" onclick="addUser()"><img
+                            src="/image/plus.png" width="10" height="10"></div>
+                    <p class="friend">Friend</p>
+                    <div class="buttonuser2" type="button" id="useritemadds" onclick="removeUser()"><img
+                            src="/image/minus-sign.png" width="10" height="10"></div>
+                </div>
+                <br>
+
+                <!-- ////// Share item sections start ////// -->
+
+                <!-- add shared items button -->
+                <div class="sharebutton">
+                    <div class="bgTop">
+                        <p class="shareTitle">Shared Items</p>
+                    </div>
+                    <br>
+
+                    <!--//// shared item input section //// -->
+
+                    <div classs="sharedItemBg">
+                        <div id="shared" class="user" style="">
+                            <div id="shareitems" class="username">
+                                <label>
+                                    No. of Friends
+                                </label>
+                                <input type="text" id="FriendNumber" name="name" placeholder="Split equally">
+                            </div>
+                            <div id="shareItem01">
+                                <div class="itemprice">
+                                    <label>
+                                        Shared Item 1
+                                    </label>
+                                    <input type="number" id="share1" name="itemprice" placeholder="Price">
+                                </div>
+                            </div>
+                            <div id="shareItem02" style="display: none;">
+                                <div class="itemprice">
+                                    <label>
+                                        Shared Item 2
+                                    </label>
+                                    <input type="number" id="share2" name="itemprice" placeholder="Price">
+                                </div>
+                            </div>
+                            <div id="shareItem03" style="display: none;">
+                                <div class="itemprice">
+                                    <label>
+                                        Shared Item 3
+                                    </label>
+                                    <input type="number" id="share3" name="itemprice" placeholder="Price">
+                                </div>
+                            </div>
+                            <div id="shareItem04" style="display: none;">
+                                <div class="itemprice">
+                                    <label>
+                                        Shared Item 4
+                                    </label>
+                                    <input type="number" id="share4" name="itemprice" placeholder="Price">
+                                </div>
+                            </div>
+                            <div id="shareItem05" style="display: none;">
+                                <div class="itemprice">
+                                    <label>
+                                        Shared Item 5
+                                    </label>
+                                    <input type="number" id="share5" name="itemprice" placeholder="Price">
+                                </div>
+                            </div>
+                            <div class="itembuttoncol">
+                                <div class="itembutton">
+                                    <div class="addbuttons">
+                                        <div id="useritemaddrest" onclick="resetShareItems()"><img src="image/undo.png" width="12"
+                                                height="12"></div>
+                                    </div>
+                                    <div class="addbuttons">
+                                        <div id="useritemadd" onclick="addShareItems()"><img src="image/plus.png" width="12"
+                                                height="12"></div>
+                                    </div>
+                
+                                </div>
+                            </div>
+                        </div>
+                
+                    </div>
+
+                    <!--//// end shared item input section //// -->
+
+                    <div class="bgBot">
+                        <div class="toggle">
+                            <div class="toggleCircle" onclick="">Toggle Button</div>
+                        </div>
+                    </div>
+                </div>
+                <br>
+
+                <!-- ////// Share item sections ends ////// -->
+
+                <br>
+            </div> <!-- /////////////<div class="secondback">//////////////// -->
+
+            <!-- Tax Area -->
+            <div class="rows">
+                <div class="box1">
+                    <div class="box1a">
+                        <div class="box1b"></div>
+                    </div>
+                </div>
+
+                <div class="calctax">
+                    <label>
+                        Service Tax:
+                    </label>
+                    <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> %
+                    <!-- <div class="calctax"> -->
+                </div>
+
+                <div class="box2">
+                    <div class="box2a">
+                        <div class="box2b"></div>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div id="user2item02" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 2
-            </label>
-            <input type="number" id="item2u2" name="itemprice" placeholder="Price">
+
+            <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle()/* disableDivClick('calculate') */;">SPLIT BILL</button>
+            <br>
+
+            <!-- Summary -->
+            <br>
+            <div class="summ" id="summary">
+                <label class="gt">GRAND TOTAL</label>
+                <div class="bgtotal">
+                    <p class="total" id="totalprice">RM 0.00</p>
+                </div>
+                <br>
+
+                <label id="spint" class="spint" style="display: none;">Split into</label>
+
+
+                <div class="align" style="display: none;">
+                    <div class="totalfriends">
+                        <label id="user1name"></label>
+                        <p id="totaluser1"></p>
+                    </div>
+                    <div class="totalfriends">
+                        <label id="user2name"></label>
+                        <p id="totaluser2"></p>
+                    </div>
+                    <div class="totalfriends">
+                        <label id="user3name"></label>
+                        <p id="totaluser3"></p>
+                    </div>
+                    <div class="totalfriends">
+                        <label id="user4name"></label>
+                        <p id="totaluser4"></p>
+                    </div>
+                    <div class="totalfriends">
+                        <label id="user5name"></label>
+                        <p id="totaluser5"></p>
+                    </div>
+                    <div class="totalfriends"> <!-- //// shared items total price sections //// -->
+                        <label id="shareItems"></label>
+                        <p id="sharedItemsPrice"></p>
+                    </div>
+                </div>
+                <div id="muncul">
+                </div>
+
+                <!-- //// Reset Button Sections //// -->
+
+                <a><button class="resetall" id="resetall" onclick="resetingAll()">Reset All</button></a>
             </div>
-         </div>
-         <div id="user2item03" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 3
-            </label>
-            <input type="number" id="item3u2" name="itemprice" placeholder="Price">
-        </div>
-        </div>
-        <div id="user2item04" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 4
-            </label>
-            <input type="number" id="item4u2" name="itemprice" placeholder="Price">
-            </div>
-         </div>
-         <div id="user2item05" style="display: none;">
-            <div class="itemprice">
-            <label>
-                Item 5
-            </label>
-            <input type="number" id="item5u2" name="itemprice" placeholder="Price">
-            </div>
-        </div>
-         </div>
-         <div class="itembutton">
-             <div class="addbuttons">
-                 <div id="useritemaddrest" onclick="resetItems2()"><img src="image/undo.png" width="12" height="12"></div>
-             </div>
-            <div class="addbuttons">
-                <div id="useritemadd" onclick="addItems2()"><img src="image/plus.png" width="12" height="12"></div>
-            </div>
-    
-        </div>
+        </div> <!-- <div class="firstback"> -->
+        <p class="disclaimer">Disclaimer: We do not collect any data from you, and all data processing occurs directly
+            in your internet browser</p>
+    </div> <!-- <div class="container"> -->
 
-<!-- User3 -->
-
-<div id="user3" class="user" style="display: none;">
-    <div id="username3" class="username">
-        <label>
-            Name
-        </label>
-        <input type="text" id="name3" name="name" placeholder="Friend Name">
-    </div>
-    <div id="user3item01">
-        <div class="itemprice">
-        <label>
-            Item 1
-        </label>
-        <input type="number" id="item1u3" name="itemprice" placeholder="Price">
-        </div>
-    </div>
-    <div id="user3item02" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 2
-        </label>
-        <input type="number" id="item2u3" name="itemprice" placeholder="Price">
-    </div>
-     </div>
-     <div id="user3item03" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 3
-        </label>
-        <input type="number" id="item3u3" name="itemprice" placeholder="Price">
-    </div>
-    </div>
-    <div id="user3item04" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 4
-        </label>
-        <input type="number" id="item4u3" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-     <div id="user3item05" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 5
-        </label>
-        <input type="number" id="item5u3" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-    <div class="itembuttoncol">
-    <div class="itembutton">
-        <div class="addbuttons">
-            <div id="useritemaddrest" onclick="resetItems3()"><img src="image/undo.png" width="12" height="12"></div>
-        </div>
-        <div class="addbuttons">
-            <div id="useritemadd" onclick="addItems3()"><img src="image/plus.png" width="12" height="12"></div>
-        </div>
-
-    </div>
-</div>
-</div>
-
-<!-- User4 -->
-
-<div id="user4" class="user" style="display: none;">
-    <div id="username4" class="username">
-        <label>
-            Name
-        </label>
-        <input type="text" id="name4" name="name" placeholder="Friend Name">
-    </div>
-    <div id="user4item01">
-        <div class="itemprice">
-        <label>
-            Item 1
-        </label>
-        <input type="number" id="item1u4" name="itemprice" placeholder="Price">
-        </div>
-    </div>
-    <div id="user4item02" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 2
-        </label>
-        <input type="number" id="item2u4" name="itemprice" placeholder="Price">
-    </div>
-     </div>
-     <div id="user4item03" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 3
-        </label>
-        <input type="number" id="item3u4" name="itemprice" placeholder="Price">
-        </div>
-    </div>
-    <div id="user4item04" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 4
-        </label>
-        <input type="number" id="item4u4" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-     <div id="user4item05" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 5
-        </label>
-        <input type="number" id="item5u4" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-<div class="itembuttoncol">
-<div class="itembutton">
-    <div class="addbuttons">
-        <div id="useritemaddrest" onclick="resetItems4()"><img src="image/undo.png" width="12" height="12"></div>
-    </div>
-<div class="addbuttons">
-    <div id="useritemadd" onclick="addItems4()"><img src="image/plus.png" width="12" height="12"></div>
-</div>
-
-</div>
-    </div>
-</div>
-
-<!-- User5 -->
-
-<div id="user5" class="user" style="display: none;">
-    <div id="username5" class="username">
-        <label>
-            Name
-        </label>
-        <input type="text" id="name5" name="name" placeholder="Friend Name">
-    </div>
-    <div id="user5item01">
-        <div class="itemprice">
-        <label>
-            Item 1
-        </label>
-        <input type="number" id="item1u5" name="itemprice" placeholder="Price">
-        </div>
-    </div>
-    <div id="user5item02" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 2
-        </label>
-        <input type="number" id="item2u5" name="itemprice" placeholder="Price">
-    </div>
-     </div>
-     <div id="user5item03" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 3
-        </label>
-        <input type="number" id="item3u5" name="itemprice" placeholder="Price">
-        </div>
-    </div>
-    <div id="user5item04" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 4
-        </label>
-        <input type="number" id="item4u5" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-     <div id="user5item05" style="display: none;">
-        <div class="itemprice">
-        <label>
-            Item 5
-        </label>
-        <input type="number" id="item5u5" name="itemprice" placeholder="Price">
-        </div>
-     </div>
-     <div class="itembuttoncol">
-<div class="itembutton">
-    <div class="addbuttons">
-        <div id="useritemaddrest" onclick="resetItems5()"><img src="image/undo.png" width="12" height="12"></div>
-    </div>
-<div class="addbuttons">
-    <div id="useritemadd" onclick="addItems5()"><img src="image/plus.png" width="12" height="12"></div>
-</div>
-
-</div>
-     </div>
-</div>
-<br>
-<div class="userbutton">
-    <div class="buttonuser1" type="button" id="useritemadds" onclick="addUser()"><img src="/image/plus.png" width="10" height="10"></div>
-<p class="friend">Friend</p>
-    <div class="buttonuser2" type="button" id="useritemadds" onclick="removeUser()"><img src="/image/minus-sign.png" width="10" height="10"></div>
-</div>
-<br>
-</div>  <!-- <div class="secondback"> -->
-
-<!-- Tax Area -->
-<div class="rows">
-    <div class="box1">
-        <div class="box1a">
-            <div class="box1b"></div>
-        </div>
+    <div id="black" class="black" style="display: none;"></div>
+    <div id="notification" class="notification" style="display: none;">
+        <img class="image" src="/image/receipt.gif">
+        <p id="notificationMessage">Calculating</p>
+        <!-- <button onclick="closeNotification()">Close</button> -->
     </div>
 
-        <div class="calctax">
-        <label>
-            Service Tax:
-        </label>
-        <input type="number" id="servTax" name="serviceTax" placeholder="Tax"> % <!-- <div class="calctax"> -->
-        </div>
-
-        <div class="box2">
-        <div class="box2a">
-            <div class="box2b"></div>
-        </div>
+    <div id="notificationUser" class="notificationUser" style="display: none;">
+        <img class="image" src="/image/Maxmin user.png">
+        <p id="notificationMessageMax" style="display: none;">Maximum Friends!</p>
+        <p id="notificationMessageMin" style="display: none;">Minimum Friends!</p>
+        <button class="notiUserButton" onclick="closeNotificationUser()">Close</button>
     </div>
-</div>
 
-    <button type="button" class="buttoncalc" id="calculate" onclick="resetElements() ;showAlert(); calc(); splitTitle()/* disableDivClick('calculate') */;
-    ">SPLIT BILL</button>
-<br>
-    
-<!-- Summary -->
-<br>
-<div class ="summ" id="summary">
-<label class="gt">GRAND TOTAL</label>
-<div class="bgtotal">
-<p class = "total" id="totalprice">RM 0.00</p>
-</div>
-<br>
+    <div id="notificationItem" class="notificationItem" style="display: none;">
+        <img class="image" src="/image/MaxMin item.png">
+        <p id="notificationMessageItem">Maximum Items!</p>
+        <button class="notiItemButton" onclick="closeNotificationItem()">Close</button>
+    </div>
 
-<label id="spint" class="spint" style="display: none;">Split into</label>
+    <div id="notificationReset" class="notification" style="display: none;">
+        <img class="image" src="/image/receipt.gif">
+        <p id="notificationMessage">Resetting</p>
+    </div>
 
+    <div id="notificationRemoveFriend" class="notification" style="display: none;">
+        <img class="image" src="/image/delete-friend.png">
+        <p id="notificationMessage">Removing Friend</p>
+    </div>
 
-<div class="align" style="display: none;">
-<div class="totalfriends">
-<label id="user1name"></label>
-<p id="totaluser1"></p>
-</div>
-<div class="totalfriends">
-<label id="user2name"></label>
-<p id="totaluser2"></p>
-</div>
-<div class="totalfriends">
-<label id="user3name"></label>
-<p id="totaluser3"></p>
-</div>
-<div class="totalfriends">
-<label id="user4name"></label>
-<p id="totaluser4"></p>
-</div>
-<div class="totalfriends">
-<label id="user5name"></label>
-<p id="totaluser5"></p>
-</div>
-</div>
-<div id="muncul">
-
-</div>
-<a><button class="resetall" id="resetall" onclick="resetingAll()">Reset All</button></a>
-</div>
-</div> <!-- <div class="firstback"> -->
-    <p class="disclaimer">Disclaimer: We do not collect any data from you, and all data processing occurs directly in your internet browser</p>
-</div> <!-- <div class="container"> -->
-
-<div id="black" class="black" style="display: none;"></div>
-<div  id ="notification" class="notification" style="display: none;">
-    <img class="image" src="/image/receipt.gif">
-    <p id="notificationMessage">Calculating</p>
-    <!-- <button onclick="closeNotification()">Close</button> -->
-  </div>
-
-  <div  id ="notificationUser" class="notificationUser" style="display: none;">
-    <img class="image" src="/image/Maxmin user.png">
-    <p id="notificationMessageMax" style="display: none;">Maximum Friends!</p>
-    <p id="notificationMessageMin" style="display: none;">Minimum Friends!</p>
-    <button class="notiUserButton" onclick="closeNotificationUser()">Close</button>
-  </div>
-
-  <div  id ="notificationItem" class="notificationItem" style="display: none;">
-    <img class="image" src="/image/MaxMin item.png">
-    <p id="notificationMessageItem">Maximum Items!</p>
-    <button class="notiItemButton" onclick="closeNotificationItem()">Close</button>
-  </div>
-
-  <div  id ="notificationReset" class="notification" style="display: none;"> 
-    <img class="image" src="/image/receipt.gif">
-    <p id="notificationMessage">Resetting</p>
-  </div>
-
-  <div  id ="notificationRemoveFriend" class="notification" style="display: none;"> 
-    <img class="image" src="/image/delete-friend.png">
-    <p id="notificationMessage">Removing Friend</p>
-  </div>
-
-  <div  id ="notificationResetAll" class="notification" style="display: none;"> 
-    <img class="image" src="/image/receipt.gif">
-    <p id="notificationMessage">Resetting All</p>
-  </div>
+    <div id="notificationResetAll" class="notification" style="display: none;">
+        <img class="image" src="/image/receipt.gif">
+        <p id="notificationMessage">Resetting All</p>
+    </div>
 </body>
+
 </html>
