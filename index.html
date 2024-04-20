@@ -364,8 +364,10 @@
 
                 <!-- add shared items button -->
                 <div class="sharebutton">
+                    
                     <div id="bgTop"class="bgTop">
                         <p class="shareTitle">Shared Items</p>
+                        <div id="bgTopshadow" class="bgTopshadow"></div>
                     </div>
 
                     <!--//// shared item input section //// -->
@@ -376,7 +378,7 @@
                                 <label>
                                     No. of Friends
                                 </label>
-                                <input type="text" id="FriendNumber" name="name" placeholder="Split equally">
+                                <input type="number" id="FriendNumber" name="name" placeholder="Split equally">
                             </div>
                             <div id="shareItem01">
                                 <div class="itemprice">
@@ -437,6 +439,7 @@
 
                     <!--//// end shared item input section //// -->
                     <div id="bgBot"class="bgBot">
+                        <div id="bgBotshadow" class="bgBotshadow"></div>
                         <div id="toggle" class="toggle">
                             <div id="toggleCircle" class="toggleCircle" onclick="toggle() ;resetShareItemsremove() ;"></div>
                         </div>
@@ -445,8 +448,6 @@
                 <br>
                         
                 <!-- ////// Share item sections ends ////// -->
-
-                <br>
             </div> <!-- /////////////<div class="secondback">//////////////// -->
 
             <!-- Tax Area -->
@@ -508,7 +509,7 @@
                         <label id="user5name"></label>
                         <p id="totaluser5"></p>
                     </div>
-                    <div class="totalfriends"> <!-- //// shared items total price sections //// -->
+                    <div id="shareTotal"class="totalfriends"> <!-- //// shared items total price sections //// -->
                         <label id="shareItems"></label>
                         <p id="sharedItemsPrice"></p>
                     </div>

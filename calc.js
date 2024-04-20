@@ -234,16 +234,18 @@ if (totalAndTax) {
     const TotalShare = (share1 + share2 + share3 + share4 + share5)
     const TotalPerPerson = (TotalShare + (TotalShare*(sevTax/100)))/FriendNumber
     const TotalPerPersonFix = TotalPerPerson.toFixed(2)
+    console.log(TotalPerPersonFix)
+
     const shareitems = document.getElementById('shareItems')
     const appear = document.getElementById('sharedItemsPrice')
     const align6 = document.getElementById('muncul')
     
     
-    if (TotalPerPersonFix) {
-        shareitems.innerText = '🐱 ' + 'Shared';
+    if (TotalShare) {
+        shareitems.innerText = 'Shared items';
     }
     
-    if (TotalPerPersonFix) {
+    if (TotalShare) {
         appear.innerText = 'RM ' + TotalPerPersonFix;
         const totalfriends = document.createElement('div');
         totalfriends.classList.add('totalfriends');
@@ -251,7 +253,7 @@ if (totalAndTax) {
     
         const label = document.createElement('label');
         label.setAttribute('id', 'shareItems');
-        label.innerText = '🐱 ' + 'Shared';
+        label.innerText = 'Shared items';
         totalfriends.appendChild(label);
     
         const paragraph = document.createElement('p');

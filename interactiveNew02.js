@@ -77,32 +77,7 @@ function addShareItems(){
 }
 
 
-function toggle() {
-  let toggle = document.getElementById('toggleCircle');
-  toggle.classList.toggle('toggleActiveCircle');
-
-  let toggles = document.getElementById('toggle');
-  toggles.classList.toggle('toggleActive');
-
-  let bgshare = document.getElementById('sharedItemBg');
-  bgshare.classList.toggle('sharedItemBgActive'); 
-  
-  let bgTop = document.getElementById('bgTop');
-  bgTop.classList.toggle('bgTopActive');  
-
-  let bgBot = document.getElementById('bgBot');
-  bgBot.classList.toggle('bgBotActive');  
-
-  let itemShare = document.getElementById('shared')
-
-  if (itemShare.style.display === 'none'){
-    itemShare.style.display = 'block'
-  }else{
-    itemShare.style.display = 'none'
-  }
-  
-  
-}
+///// RESETTING DUE TO TOGGLE EFFECTS /////
 
 function resetShareItemsremove() {
   let username = document.getElementById('FriendNumber');
@@ -142,6 +117,44 @@ function resetShareItemsremove() {
       document.querySelector('#shareItem01 .itemprice').classList.remove('bottom-corner-last')
 
   }
+}
+
+///// TOGGLE FUNCTIONS /////
+
+
+function toggle() {
+  let toggle = document.getElementById('toggleCircle');
+  toggle.classList.toggle('toggleActiveCircle');
+
+  let toggles = document.getElementById('toggle');
+  toggles.classList.toggle('toggleActive');
+
+  let bgshare = document.getElementById('sharedItemBg');
+  bgshare.classList.toggle('sharedItemBgActive'); 
+  
+  let bgTop = document.getElementById('bgTop');
+  setTimeout(function(){
+  bgTop.classList.toggle('bgTopActive');
+}, 700);    
+
+  let bgBot = document.getElementById('bgBot');
+  setTimeout(function(){
+  bgBot.classList.toggle('bgBotActive');  
+}, 700); 
+
+  let itemShare = document.getElementById('shared')
+
+  if (itemShare.style.display === 'none'){
+    setTimeout(function(){
+      itemShare.style.display = 'block'
+    }, 700);    
+  }else{
+    setTimeout(function(){
+    itemShare.style.display = 'none'
+  }, 700);
+  }
+  
+  
 }
   /* var content = document.getElementById("content2");
   content.classList.toggle('content3');*/

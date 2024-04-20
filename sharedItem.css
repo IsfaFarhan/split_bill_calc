@@ -18,14 +18,19 @@
     padding-bottom: 0px;
     background-color: #E2CABC;
     border-radius: 10px;
-    box-shadow: inset 67px 0px 0px 0px #a79083;
-    /* transition: box-shadow 0.1s ease-out; */
+    box-shadow: inset 2px 0px 1px 0px #a79083;
+    transition: box-shadow 0.7s ease-out;
 }
 
-.sharedItemBgActive{
+#shareItems{
+    padding-left:5px ;
+    border-radius: 5px;
+    background-color: #E2CABC;
+}
+/* .sharedItemBgActive{
     box-shadow: inset 2px 0px 2px 0px #a79083;
 }
-
+ */
 .bgTop{
     display: flex;
     padding-top: 2px;
@@ -47,7 +52,7 @@ box-shadow: inset 2px 0px 4px 0px #a79083;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0px;
+    padding-bottom: 4px;
     margin-right: 66px;
     margin-left: 66px;
     border-radius: 0px 0px 20px 20px;
@@ -80,12 +85,13 @@ box-shadow: inset 2px 0px 4px 0px #a79083;
     width: 14px;
     background-color: #E2CABC ;
     border-radius: 10px;
+    box-shadow: inset -1px 0px 1.5px 0px #a79083;
     transition: margin 0.5s ease-out;
     
 }
 
 .toggleActive{
-    box-shadow: inset 2px 0px 2px 0px #a79083;
+    box-shadow: inset 2px 0px 2px 0px #6b8c72;
     background-color:#8BFFA4 ;
 }
 
@@ -95,6 +101,16 @@ box-shadow: inset 2px 0px 4px 0px #a79083;
     /* flex-direction: row-reverse; */
 }
 
-.sharedItemBgActive{
- 
+.bgBotshadow{
+    width: 135px;
+    height:1px;
+    background-color: #E2CABC;
+    box-shadow: 0px 0px 2px 2.5px #E2CABC
+}
+
+.bgTopshadow{
+    width: 135px;
+    height:1px;
+    background-color: #E2CABC;
+    box-shadow: 0px 0px 2px 2.5px #E2CABC
 }
