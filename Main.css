@@ -109,8 +109,8 @@ input[type="text"] {
 }
 
 input[type="number"]{
-    width: 90.37px;
-    padding-left: 8px;
+    width: 100px;
+    padding-left: 4px;
     border:1px #00997C solid;
     border-radius: 8px;
 }
