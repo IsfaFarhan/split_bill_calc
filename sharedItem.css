@@ -1,0 +1,116 @@
+/* SHARESITEM IS FOR THE SHARED ITEM SECTION ONLY */
+#shared{
+    margin-top: 4px;
+} 
+
+.sharedbutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.sharedItemBg{
+    width: 276px;
+    padding-top: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 0px;
+    background-color: #E2CABC;
+    border-radius: 10px;
+    box-shadow: inset 2px 0px 1px 0px #a79083;
+    transition: box-shadow 0.7s ease-out;
+}
+
+#shareItems{
+    padding-left:5px ;
+    border-radius: 5px;
+    background-color: #E2CABC;
+}
+/* .sharedItemBgActive{
+    box-shadow: inset 2px 0px 2px 0px #a79083;
+}
+ */
+.bgTop{
+    display: flex;
+    padding-top: 2px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: baseline;
+    margin-right: 66px;
+    margin-left:66px;
+    border-radius: 100px 100px 0px 0px;
+    background-color: #E2CABC;
+    box-shadow: inset 2px 0px 0.5px 0px #a79083;
+}
+.bgTopActive{
+box-shadow: inset 2px 0px 4px 0px #a79083;
+}
+
+
+.bgBot{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 4px;
+    margin-right: 66px;
+    margin-left: 66px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: #E2CABC;
+    box-shadow: inset 2px 0px 0.5px 0px #a79083;
+}
+
+.bgBotActive{
+    box-shadow: inset 2px 0px 4px 0px #a79083;
+}
+
+.toggle{
+    display: flex;
+    flex-direction: row;
+    width: 40px;
+    height: 18px;
+    border-radius: 30px;
+    background-color: #FC7059;
+    margin-bottom: 0.5px;
+    transition: background-color 0.5s ease-out;
+    box-shadow: inset -2px 0px 2px 0px #a74742;
+    transition: box-shadow 0.5 ease-in-out;
+   /*  transition: flex-direction 2s ease-in; */
+}
+
+.toggleCircle{
+    margin: 2px;
+    margin-left: 2px;
+    height: 14px;
+    width: 14px;
+    background-color: #E2CABC ;
+    border-radius: 10px;
+    box-shadow: inset -1px 0px 1.5px 0px #a79083;
+    transition: margin 0.5s ease-out;
+    
+}
+
+.toggleActive{
+    box-shadow: inset 2px 0px 2px 0px #6b8c72;
+    background-color:#8BFFA4 ;
+}
+
+.toggleActiveCircle{
+    
+    margin-left: 24px;
+    /* flex-direction: row-reverse; */
+}
+
+.bgBotshadow{
+    width: 135px;
+    height:1px;
+    background-color: #E2CABC;
+    box-shadow: 0px 0px 2px 2.5px #E2CABC
+}
+
+.bgTopshadow{
+    width: 135px;
+    height:1px;
+    background-color: #E2CABC;
+    box-shadow: 0px 0px 2px 2.5px #E2CABC
+}

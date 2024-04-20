@@ -1,3 +1,6 @@
+/* MAIN CSS FOR THE OVERALL LOOKS OF THE APP */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
 
 * {
@@ -81,7 +84,7 @@ figure{
     width: 290px;
     margin-left: 12px;
     border-radius: 10px;
-    box-shadow:inset -2px -2px 4px 2px #debc84;
+    box-shadow:inset 2px -2px 4px 2px #debc84;
 }
 
 .secondback{
@@ -106,8 +109,8 @@ input[type="text"] {
 }
 
 input[type="number"]{
-    width: 90.37px;
-    padding-left: 8px;
+    width: 100px;
+    padding-left: 4px;
     border:1px #00997C solid;
     border-radius: 8px;
 }
@@ -124,7 +127,7 @@ input[type="number"]{
     width:260px;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
-    box-shadow: -3px 6px 4px 0px #cab3a6;
+    box-shadow: 3px 6px 4px 0px #cab3a6;
 }
 
 .itemprice{
@@ -135,7 +138,7 @@ input[type="number"]{
     background-color: white;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    box-shadow: -3px 6px 6px 0px #cab3a6;
+    box-shadow: 3px 6px 6px 0px #cab3a6;
 }
 
 .bottom-corner-last{

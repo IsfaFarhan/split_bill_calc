@@ -1,4 +1,6 @@
 
+/*//// Add Item Function for each Users //// */
+
 function addItems (){
     let useritem02 = document.getElementById('useritem02');
     let useritem03 = document.getElementById('useritem03');
@@ -374,6 +376,8 @@ function addItems5 (){
         resetingRemoveFriend()
       }
 }
+  
+/* //// Add user Fuunction Button ///// */
 
 function addUser() {
     let user3 = document.getElementById('user3');
@@ -423,8 +427,16 @@ function removeUser() {
     }
 }
 
+function closeNotificationUser() {
+  let notification = document.getElementById("notificationUser");
+  let bgNotification = document.getElementById("black")
+  bgNotification.style.display = "none";
+  notification.style.display = "none";
+}
 
-function showAlert() { //// For Loading Splitting Bills ////
+//// For Loading Splitting Bills notification ////
+
+function showAlert() { 
   let notification = document.getElementById("notification");
   let bgNotification = document.getElementById("black")
   bgNotification.style.display = "block"
@@ -434,7 +446,6 @@ function showAlert() { //// For Loading Splitting Bills ////
   }, 2000);
 }
 
-// Function to close the notification
 function closeNotification() {
   let notification = document.getElementById("notification");
   let bgNotification = document.getElementById("black")
@@ -442,12 +453,14 @@ function closeNotification() {
   notification.style.display = "none";
 }
 
-function closeNotificationUser() {
-  let notification = document.getElementById("notificationUser");
+//// For maximum items notification ////
+
+function maxItem(){
+  let notification = document.getElementById("notificationItem");
   let bgNotification = document.getElementById("black")
-  bgNotification.style.display = "none";
-  notification.style.display = "none";
-}
+  bgNotification.style.display = "block"
+  notification.style.display = "flex";
+  }
 
 function closeNotificationItem() {
   let notification = document.getElementById("notificationItem");
@@ -456,12 +469,8 @@ function closeNotificationItem() {
   notification.style.display = "none";
 }
 
-function maxItem(){
-  let notification = document.getElementById("notificationItem");
-  let bgNotification = document.getElementById("black")
-  bgNotification.style.display = "block"
-    notification.style.display = "flex";
-  }
+
+//// For Reseting Items notification ////
 
   function reseting(){
     let notification = document.getElementById("notificationReset");
@@ -480,6 +489,8 @@ function maxItem(){
     notification.style.display = "none";
   }
  
+//// For Remove Friends notification ////
+
   function resetingRemoveFriend(){
     let notification = document.getElementById("notificationRemoveFriend");
     let bgNotification = document.getElementById("black")
@@ -511,6 +522,7 @@ function maxItem(){
     resetElements();
     resetTotalPrice();
     resetSplitTitle();
+    resetShareItems();
     bgNotification.style.display = "block"
     notification.style.display = "flex";
     setTimeout(function(){
